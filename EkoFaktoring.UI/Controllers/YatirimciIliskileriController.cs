@@ -4,7 +4,7 @@ namespace EkoFaktoring.UI.Controllers
 {
     public class YatirimciIliskileriController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Bono()
         {
             return View();
         }

@@ -27,8 +27,4 @@
     <ProjectReference Include="..\EkoFaktoring.Business\EkoFaktoring.Business.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
 </Project>
