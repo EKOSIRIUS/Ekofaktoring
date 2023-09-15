@@ -7,7 +7,7 @@
     <title>EKO Faktoring</title>
  
     @await Html.PartialAsync("_cssPartial")
-
+    @RenderSection("_tablerCss", false)
 </head>
 
 
@@ -52,5 +52,6 @@
     <script src="/home/assets/vendors/extra-scripts/jquery.paroller.min.js"></script>
     <script src="/home/assets/vendors/language-switcher/jquery.polyglot.language.switcher.js"></script>
     <script src="/home/assets/js/custom.js"></script>
+    @RenderSection("_tablerJs", false)
 </body>
 </html>

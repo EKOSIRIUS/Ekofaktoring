@@ -12,7 +12,7 @@ namespace EkoFaktoring.UI.Controllers
         {
             return View();
         }
-        public IActionResult AcikPozisyonlar()
+        public IActionResult IsBasvuruFormu()
         {
             return View();
         }
