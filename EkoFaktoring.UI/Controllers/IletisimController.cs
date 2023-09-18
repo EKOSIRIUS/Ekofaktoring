@@ -7,6 +7,7 @@ namespace EkoFaktoring.UI.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.ActiveTab = "Iletisim";
             return View();
         }
         [HttpPost]

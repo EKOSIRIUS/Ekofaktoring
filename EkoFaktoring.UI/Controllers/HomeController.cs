@@ -6,6 +6,7 @@ namespace EkoFaktoring.UI.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.ActiveTab = "Anasayfa";
             return View();
         }
     }

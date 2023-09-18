@@ -6,10 +6,12 @@ namespace EkoFaktoring.UI.Controllers
     {
         public IActionResult BagimsizDenetimRaporu()
         {
+            ViewBag.ActiveTab = "DenetimRaporlari";
             return View();
         }
         public IActionResult BagimsizDerecelendirmeRaporu()
         {
+            ViewBag.ActiveTab = "DenetimRaporlari";
             return View();
         }
     }
