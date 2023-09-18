@@ -6,6 +6,7 @@ namespace EkoFaktoring.UI.Controllers
     {
         public IActionResult Bono()
         {
+            ViewBag.ActiveTab = "YatirimciIliskileri";
             return View();
         }
     }
