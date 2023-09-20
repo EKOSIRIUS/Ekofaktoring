@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EkoFaktoring.Entity", "EkoF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EkoFaktoring.UI", "EkoFaktoring.UI\EkoFaktoring.UI.csproj", "{6E168494-D717-4109-802D-13BEE3239632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EkoFaktoring.Shared", "EkoFaktoring.Shared\EkoFaktoring.Shared.csproj", "{3637CB16-4303-4F98-942D-CC7FA52008D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EkoFaktoring.Shared", "EkoFaktoring.Shared\EkoFaktoring.Shared.csproj", "{3637CB16-4303-4F98-942D-CC7FA52008D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

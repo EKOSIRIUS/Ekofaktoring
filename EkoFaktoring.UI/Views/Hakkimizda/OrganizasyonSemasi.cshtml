@@ -1,8 +1,15 @@
 ﻿<section id="contact" class="main-contact-form-area pdb100">
-    <div class="container">
+    <div class="px-1">
         <div class="row">
             <h1 class="mb-5 text-center"><b>Organizasyon Şeması</b></h1>
-            <img class="img-fluid" src="https://ekofaktoring.com/ui/img/3organizasyon_semasi.png" />
+            <div class="w-100">
+                <div style="width:100%;" id="tree"></div>
+            </div>
         </div>
     </div>
 </section>
+
+@section _tablerJs {
+    <script src="~/home/assets/js/orgchart.js" defer></script>
+    <script src="~/home/assets/js/orgschema.js" defer></script>
+}
