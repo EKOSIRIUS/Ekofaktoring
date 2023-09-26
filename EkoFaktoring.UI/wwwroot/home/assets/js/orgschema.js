@@ -1,5 +1,5 @@
 let chart = new OrgChart(document.getElementById("tree"), {
-   mouseScrool: OrgChart.action.none,
+  mouseScrool: OrgChart.action.none,
   enableSearch: false,
   template: "ula",
   nodeBinding: {
@@ -51,3 +51,7 @@ let chart = new OrgChart(document.getElementById("tree"), {
 OrgChart.templates.ula.size = [250, 70];
 OrgChart.templates.ula.defs = "";
 OrgChart.templates.ula.field_0 = '<text data-width="230" data-text-overflow="multiline" style="font-size: 20px;" fill="#00000" x="125" y="30" text-anchor="middle">{val}</text>';
+
+chart.on('click', function (sender, args) {
+    return false; //to cansel the click event
+});
