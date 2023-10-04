@@ -4,9 +4,12 @@ namespace EkoFaktoring.UI.Controllers
 {
     public class YatirimciIliskileriController : Controller
     {
-        public IActionResult Bono()
+        public YatirimciIliskileriController()
         {
             ViewBag.ActiveTab = "YatirimciIliskileri";
+        }
+        public IActionResult Bono()
+        {
             return View();
         }
     }

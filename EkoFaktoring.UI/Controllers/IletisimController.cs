@@ -5,9 +5,13 @@ namespace EkoFaktoring.UI.Controllers
 {
     public class IletisimController : Controller
     {
-        public IActionResult Index()
+        public IletisimController()
         {
             ViewBag.ActiveTab = "Iletisim";
+
+        }
+        public IActionResult Index()
+        {
             return View();
         }
         [HttpPost]

@@ -4,14 +4,16 @@ namespace EkoFaktoring.UI.Controllers
 {
     public class DenetimRaporlariController : Controller
     {
-        public IActionResult BagimsizDenetimRaporu()
+        public DenetimRaporlariController()
         {
             ViewBag.ActiveTab = "DenetimRaporlari";
+        }
+        public IActionResult BagimsizDenetimRaporu()
+        {        
             return View();
         }
         public IActionResult BagimsizDerecelendirmeRaporu()
         {
-            ViewBag.ActiveTab = "DenetimRaporlari";
             return View();
         }
     }

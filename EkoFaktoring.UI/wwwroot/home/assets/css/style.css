@@ -11200,8 +11200,10 @@ li.single-benefits-box-colum:nth-child(6) .single-benefits-box .icon {
 }
 
 
-
-
+.app-screen{
+    display:flex;
+    justify-content:center;
+}
 
 /*** 
 =============================================

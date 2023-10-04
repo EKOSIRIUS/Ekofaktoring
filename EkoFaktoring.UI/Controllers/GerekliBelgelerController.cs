@@ -2,11 +2,11 @@
 
 namespace EkoFaktoring.UI.Controllers
 {
-    public class HomeController : Controller
+    public class GerekliBelgelerController : Controller
     {
-        public HomeController()
+        public GerekliBelgelerController()
         {
-            ViewBag.ActiveTab = "Anasayfa";
+            ViewBag.ActiveTab = "GerekliBelgeler";
         }
         public IActionResult Index()
         {

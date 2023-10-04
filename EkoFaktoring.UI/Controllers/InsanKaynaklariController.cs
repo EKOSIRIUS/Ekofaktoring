@@ -4,19 +4,21 @@ namespace EkoFaktoring.UI.Controllers
 {
     public class InsanKaynaklariController : Controller
     {
-        public IActionResult Kariyer()
+        public InsanKaynaklariController()
         {
             ViewBag.ActiveTab = "InsanKaynaklari";
+
+        }
+        public IActionResult Kariyer()
+        {
             return View();
         }
         public IActionResult Politika()
         {
-            ViewBag.ActiveTab = "InsanKaynaklari";
             return View();
         }
         public IActionResult IsBasvuruFormu()
         {
-            ViewBag.ActiveTab = "InsanKaynaklari";
             return View();
         }
     }
