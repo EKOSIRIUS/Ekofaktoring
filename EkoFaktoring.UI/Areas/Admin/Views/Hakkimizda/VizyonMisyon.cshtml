@@ -1,0 +1,16 @@
+﻿<form>
+    <textarea style="" name="text">
+
+    </textarea>
+</form>
+
+@section _tinyMce{
+    <script src="~/dashboard/dist/js/cdn.tiny.cloud_1_no-origin_tinymce_6.6.2-27_tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
+}
