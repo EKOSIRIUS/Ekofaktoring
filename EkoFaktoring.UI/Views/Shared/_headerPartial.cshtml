@@ -55,6 +55,14 @@
                                         <li><a asp-area="" asp-controller="InsanKaynaklari" asp-action="IsBasvuruFormu">İş Başvuru Formu</a></li>
                                     </ul>
                                 </li>
+                                <li class="dropdown @(ViewBag.ActiveTab == "InsanKaynaklari" ? "current" : "")">
+                                    <a href="#">Neden Faktoring</a>
+                                    <ul>
+                                        <li><a asp-area="" asp-controller="InsanKaynaklari" asp-action="Politika">Faktoring Nedir?</a></li>
+                                        <li><a asp-area="" asp-controller="InsanKaynaklari" asp-action="Kariyer">Gerekli Belgeler</a></li>
+                                        <li><a asp-area="" asp-controller="InsanKaynaklari" asp-action="IsBasvuruFormu">S.S.S.</a></li>
+                                    </ul>
+                                </li>
                                 <li class="scrollToLink @(ViewBag.ActiveTab == "Iletisim" ? "current" : "")">
                                     <a asp-area="" asp-controller="Iletisim" asp-action="Index">İletişim</a>
                                 </li>
