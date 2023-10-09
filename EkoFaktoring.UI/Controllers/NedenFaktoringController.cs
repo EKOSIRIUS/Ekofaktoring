@@ -2,18 +2,17 @@
 
 namespace EkoFaktoring.UI.Controllers
 {
-    public class HomeController : CustomBaseController
+    public class NedenFaktoringController : CustomBaseController
     {
-        [Route("/")]
-        public IActionResult Anasayfa()
+        public IActionResult FaktoringNedir()
         {
             return View();
         }
-        public IActionResult KisiselVerilerinKorunmasi()
+        public IActionResult GerekliBelgeler()
         {
             return View();
         }
-        public IActionResult OnlineIslem()
+        public IActionResult SikcaSorulanSorular()
         {
             return View();
         }
