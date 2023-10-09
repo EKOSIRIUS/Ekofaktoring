@@ -2,13 +2,13 @@
 
 namespace EkoFaktoring.UI.Controllers
 {
-    public class IletisimController : CustomBaseController
+    public class DuyurularController : CustomBaseController
     {
-        public IActionResult Subelerimiz()
+        public IActionResult EkoDuyurular()
         {
             return View();
         }
-        public IActionResult BizeUlasin()
+        public IActionResult Duyuru()
         {
             return View();
         }
