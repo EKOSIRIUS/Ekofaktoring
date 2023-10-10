@@ -13,9 +13,5 @@ namespace EkoFaktoring.UI.Controllers
         {
             return View();
         }
-        public IActionResult OnlineIslem()
-        {
-            return View();
-        }
     }
 }

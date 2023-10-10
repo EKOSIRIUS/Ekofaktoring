@@ -2,9 +2,9 @@
 
 namespace EkoFaktoring.UI.Controllers
 {
-    public class IletisimController : CustomBaseController
+    public class OnlineIslemlerController : CustomBaseController
     {
-        public IActionResult Iletisim()
+        public IActionResult OnlineIslem()
         {
             return View();
         }
