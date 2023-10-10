@@ -3489,22 +3489,22 @@ animation: spinner 1s infinite linear;
   color: #ffffff;
 }
 
-.emi-calculator-tab__button .tabs-button-box .tab-btn-item .icon-box:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 50%;
-  transform: scale(0);
-  transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
-  background-image: -moz-linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
-  background-image: -webkit-linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
-  background-image: -ms-linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
-  z-index: -1;
-}
+    .emi-calculator-tab__button .tabs-button-box .tab-btn-item .icon-box:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%;
+        transform: scale(0);
+        transform-style: preserve-3d;
+        transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+        background-image: -moz-linear-gradient(0deg, rgb(37, 184, 93) 0%, rgb(80, 185, 72) 100%);
+        background-image: -webkit-linear-gradient(0deg, rgb(37, 184, 93) 0%, rgb(80, 185, 72) 100%);
+        background-image: -ms-linear-gradient(0deg, rgb(37, 184, 93) 0%, rgb(80, 185, 72) 100%);
+        z-index: -1;
+    }
 
 .emi-calculator-tab__button .tabs-button-box .tab-btn-item:hover .icon-box:before,
 .emi-calculator-tab__button .tabs-button-box .tab-btn-item.active-btn-item .icon-box:before {

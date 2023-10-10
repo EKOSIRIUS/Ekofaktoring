@@ -1,1 +1,177 @@
-﻿
+﻿<!--Start EMI Calculator Area-->
+<section class="emi-calculator-area">
+    <div class="container">
+        <div class="sec-title text-center">
+            <h2>Online İşlem</h2>
+            <div class="sub-title">
+                <p>7/24 Online işlem başvurusu yapabilirsiniz</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="emi-calculator-tab">
+
+                    <div class="emi-calculator-tab__button">
+                        <div class="emi-calculator-tab__button--bg"
+                             style="background-image: url(assets/images/resources/emi-calculator.jpg);"></div>
+                        <ul class="tabs-button-box">
+                            <li data-tab="#home-loan" id="contact-step" class="tab-btn-item active-btn-item">
+                                <div class="icon-box">
+                                    <span class="icon-human">
+                                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span>
+                                    </span>
+                                    <div class="overlay-text">
+                                        <p>İletişim Bilgileri</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-tab="#personal-loan" id="islem-step" class="tab-btn-item">
+                                <div class="icon-box">
+                                    <span class="icon-loan-2"></span>
+                                    <div class="overlay-text">
+                                        <p>İşlem Bilgileri</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-tab="#vehicle-loan" id="done-step" class="tab-btn-item">
+                                <div class="icon-box">
+                                    <span class="icon-expert"><span class="path1"></span><span class="path2"></span></span>
+                                    <div class="overlay-text">
+                                        <p>Başvuru Durumu</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="emi-calculator-tab-content-box-outer">
+                        <!--Start Tabs Content Box-->
+                        <div class="tabs-content-box">
+
+                            <!--Tab-->
+                            <div class="tab-content-box-item tab-content-box-item-active" id="home-loan">
+                                <div class="emi-calculator-tab-content-box-item">
+
+                                    <div class="range-box">
+                                        <div class="row">
+                                            <div class="contact-form col-12" style="background:transparent !important; padding: 0 !important;">
+                                                <form id="contact_form">
+                                                    <h2 class="mb-4">İletişim Bilgileri</h2>
+                                                    <div class="form-group">
+                                                        <label for="name">İsim Soyisim</label>
+                                                        <div class="input-box">
+                                                            <input type="text" name="name">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="email">Email</label>
+                                                        <div class="input-box">
+                                                            <input type="email" name="email">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="number">Telefon Numarası</label>
+                                                        <div class="input-box">
+                                                            <input type="text" name="number">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group d-none" id="smsCodeDiv">
+                                                        <label for="smscode">Sms Doğrulama Kodu</label>
+                                                        <div class="input-box">
+                                                            <input type="text" name="smscode">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="button-box" id="next-sms-div">
+                                                        <button id="next-sms-btn" class="btn-one">
+                                                            <span id="next-text-sms" class="txt">
+                                                                Doğrulama Kodu Al
+                                                            </span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="button-box d-none" id="next-div">
+                                                        <button id="next-btn" class="btn-one">
+                                                            <span id="next-text" class="txt">
+                                                                Sonraki
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--Tab-->
+                            <div class="tab-content-box-item" id="personal-loan">
+                                <div class="emi-calculator-tab-content-box-item">
+
+                                    <div class="range-box">
+                                        <div class="row">
+                                            <div class="contact-form col-12" style="background:transparent !important; padding: 0 !important;">
+                                                <form id="islem_form">
+                                                    <h2 class="mb-4">İşlem Bilgileri</h2>
+                                                    <div class="form-group">
+                                                        <label for="vkn">Vergi Kimlik Numarası</label>
+                                                        <div class="input-box">
+                                                            <input type="text" name="vkn">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="image">Çek Görüntüsü</label>
+                                                        <div class="input-box">
+                                                            <input type="text" name="image">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="button-box">
+                                                        <button class="btn-one" id="submitBtn">
+                                                            <span class="txt">
+                                                                Gönder
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--Tab-->
+                            <div class="tab-content-box-item" id="vehicle-loan">
+                                <div class="emi-calculator-tab-content-box-item">
+
+                                    <div class="range-box">
+                                        <div class="row">
+                                            <div class="col-lg-12 column">
+                                                <h2>İşleminiz Başarılı. Başvurunuz alınmıştır.</h2>
+                                                <p>xxxx Referans numarasından sorgulaya bilirsiniz.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--End Tabs Content Box-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End EMI Calculator Area-->
+@section _tablerJs{
+    <script src="/home/assets/js/onlineislem.js" referrerpolicy="origin"></script>
+}
