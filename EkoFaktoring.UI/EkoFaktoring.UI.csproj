@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EkoFaktoring.Business\EkoFaktoring.Business.csproj" />
+    <ProjectReference Include="..\EkoFaktoring.Service\EkoFaktoring.Service.csproj" />
   </ItemGroup>
 
 </Project>

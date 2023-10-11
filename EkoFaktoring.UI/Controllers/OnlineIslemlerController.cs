@@ -8,5 +8,10 @@ namespace EkoFaktoring.UI.Controllers
         {
             return View();
         }
+
+        public IActionResult BasvuruTakip()
+        {
+            return View();
+        }
     }
 }
