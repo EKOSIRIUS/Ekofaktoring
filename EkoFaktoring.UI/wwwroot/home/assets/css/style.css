@@ -3437,16 +3437,16 @@ animation: spinner 1s infinite linear;
 }
 
 .emi-calculator-tab__button--bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #646464;
-  background-blend-mode: luminosity;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #1a1c23;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 .emi-calculator-tab__button .tabs-button-box {

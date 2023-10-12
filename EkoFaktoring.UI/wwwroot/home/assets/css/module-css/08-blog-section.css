@@ -690,17 +690,17 @@ Blog Style1 Area Css
     margin: 0 0 22px;
 }
 
-.blog-details-text-box .blog-details-title:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 2px;
-    background-image: -moz-linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
-    background-image: -webkit-linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
-    background-image: -ms-linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
-}
+    .blog-details-text-box .blog-details-title:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 2px;
+        background-image: -moz-linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
+        background-image: -webkit-linear-gradient(0deg, rgb(37, 184, 93) 0%, rgb(80, 185, 72) 100%);
+        background-image: -ms-linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
+    }
 
 
 .blog-details-quote-box {
