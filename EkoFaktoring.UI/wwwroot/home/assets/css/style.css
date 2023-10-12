@@ -10871,7 +10871,7 @@ li.single-benefits-box-colum:nth-child(6) .single-benefits-box .icon {
 
 .customer-care-numbers-table tbody tr td.inner-title {
   position: relative;
-  padding: 0 40px;
+  padding: 0 !important;
   padding-right: 20px;
 }
 
