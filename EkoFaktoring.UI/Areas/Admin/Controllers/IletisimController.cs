@@ -4,9 +4,12 @@ namespace EkoFaktoring.UI.Areas.Admin.Controllers
 {
     public class IletisimController : CustomBaseController
     {
-        public IActionResult Iletisim()
+        public IletisimController()
         {
             ViewBag.ActiveTabAdmin = "Iletisim";
+        }
+        public IActionResult Iletisim()
+        {
             return View();
         }
     }

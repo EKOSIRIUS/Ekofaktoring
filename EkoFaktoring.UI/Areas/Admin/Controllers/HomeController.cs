@@ -2,11 +2,14 @@
 
 namespace EkoFaktoring.UI.Areas.Admin.Controllers
 {
-    public class AnasayfaController : CustomBaseController
+    public class HomeController : CustomBaseController
     {
-        public IActionResult Anasayfa()
+        public HomeController()
         {
             ViewBag.ActiveTabAdmin = "Anasayfa";
+        }
+        public IActionResult Anasayfa()
+        {
             return View();
         }
     }

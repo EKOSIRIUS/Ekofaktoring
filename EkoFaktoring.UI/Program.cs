@@ -16,7 +16,7 @@ namespace EkoFaktoring.UI
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+             
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
