@@ -1,13 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EkoFaktoring.Core.Models.Duyurular;
+using EkoFaktoring.Core.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EkoFaktoring.UI.Areas.Admin.Controllers
 {
     public class DuyurularController : CustomBaseController
     {
-        public DuyurularController()
-        {
-            ViewBag.ActiveTabAdmin = "Duyurular";
-        }
         public IActionResult Duyurular()
         {
             return View();

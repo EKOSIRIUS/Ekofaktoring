@@ -5,6 +5,14 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EkoFaktoring.UI", "EkoFaktoring.UI\EkoFaktoring.UI.csproj", "{6E168494-D717-4109-802D-13BEE3239632}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EkoFaktoring.Core", "EkoFaktoring.Core\EkoFaktoring.Core.csproj", "{15C86C6D-CE27-42D6-8C63-A92D0679DABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EkoFaktoring.Repository", "EkoFaktoring.Repository\EkoFaktoring.Repository.csproj", "{3ECB46A7-8901-43D3-AA3E-FBB335AC888E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EkoFaktoring.Service", "EkoFaktoring.Service\EkoFaktoring.Service.csproj", "{A43C6653-20AD-4E22-B477-0FA322480F5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EkoFaktoring.Caching", "EkoFaktoring.Caching\EkoFaktoring.Caching.csproj", "{573242AF-C9A6-414F-AA8F-16E9B42B2740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{6E168494-D717-4109-802D-13BEE3239632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E168494-D717-4109-802D-13BEE3239632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E168494-D717-4109-802D-13BEE3239632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C86C6D-CE27-42D6-8C63-A92D0679DABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C86C6D-CE27-42D6-8C63-A92D0679DABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C86C6D-CE27-42D6-8C63-A92D0679DABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C86C6D-CE27-42D6-8C63-A92D0679DABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECB46A7-8901-43D3-AA3E-FBB335AC888E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECB46A7-8901-43D3-AA3E-FBB335AC888E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECB46A7-8901-43D3-AA3E-FBB335AC888E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECB46A7-8901-43D3-AA3E-FBB335AC888E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A43C6653-20AD-4E22-B477-0FA322480F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43C6653-20AD-4E22-B477-0FA322480F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43C6653-20AD-4E22-B477-0FA322480F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43C6653-20AD-4E22-B477-0FA322480F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573242AF-C9A6-414F-AA8F-16E9B42B2740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573242AF-C9A6-414F-AA8F-16E9B42B2740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573242AF-C9A6-414F-AA8F-16E9B42B2740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573242AF-C9A6-414F-AA8F-16E9B42B2740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
