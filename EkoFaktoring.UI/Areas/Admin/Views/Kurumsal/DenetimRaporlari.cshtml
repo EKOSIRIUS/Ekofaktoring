@@ -21,26 +21,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>2012</td>
-                                <td>Bağımsız Denetim Raporu 2/2</td>
-                                <td><img src="/home/assets/images/icon/icon_pdf.png" /></td>
-                                <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
-                            </tr>
-                            <tr>
-                                <td>2012</td>
-                                <td>Bağımsız Denetim Raporu 1/2</td>
-                                <td><img src="/home/assets/images/icon/icon_pdf.png" /></td>
-                                <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
-
-                            </tr>
-                            <tr>
-                                <td>2012</td>
-                                <td>Bağımsız Denetim Raporu 1/1</td>
-                                <td><img src="/home/assets/images/icon/icon_pdf.png" /></td>
-                                <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
-
-                            </tr>
+                            @{
+                                foreach (var item in ViewBag.BagimsizDenetimRaporlari)
+                                {
+                                    <tr>
+                                        <td>@item.Year</td>
+                                        <td>@item.RaporAdi</td>
+                                        <td><a href="@item.RaporYolu"><img src="/home/assets/images/icon/icon_pdf.png" /></a></td>
+                                        <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
+                                    </tr>
+                                }
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -65,34 +56,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>2012</td>
-                                <td>Bağımsız Derecelendirme Raporu JCR</td>
-                                <td><img src="/home/assets/images/icon/icon_pdf.png" /></td>
-                                <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
-
-                            </tr>
-                            <tr>
-                                <td>2012</td>
-                                <td>Bağımsız Derecelendirme Raporu JCR</td>
-                                <td><img src="/home/assets/images/icon/icon_pdf.png" /></td>
-                                <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
-
-                            </tr>
-                            <tr>
-                                <td>2012</td>
-                                <td>Bağımsız Derecelendirme Raporu JCR</td>
-                                <td><img src="/home/assets/images/icon/icon_pdf.png" /></td>
-                                <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
-
-                            </tr>
-                            <tr>
-                                <td>2012</td>
-                                <td>Bağımsız Derecelendirme Raporu JCR</td>
-                                <td><img src="/home/assets/images/icon/icon_pdf.png" /></td>
-                                <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
-
-                            </tr>
+                            @{
+                                foreach (var item in ViewBag.BagimsizDerecelendirmeRaporlari)
+                                {
+                                    <tr>
+                                        <td>@item.Year</td>
+                                        <td>@item.RaporAdi</td>
+                                        <td><a href="@item.RaporYolu"><img src="/home/assets/images/icon/icon_pdf.png" /></a></td>
+                                        <td><a href="#">Sil</a> <a href="#">Düzenle</a></td>
+                                    </tr>
+                                }
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -110,33 +84,27 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                    <label class="form-label">Yıl</label>
-                    <input type="number" class="form-control" name="example-text-input" placeholder="Rapor Yılı Giriniz..">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Adı</label>
-                    <input type="text" class="form-control" name="example-text-input" placeholder="Rapor Adı Giriniz..">
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div>
-                            <div class="form-label">Rapor Yükle</div>
-                            <input type="file" class="form-control" />
-                        </div>
+                <form method="post" asp-area="Admin" asp-controller="Kurumsal" asp-action="BagimsizDenetimRaporu" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">Yıl</label>
+                        <input type="number" class="form-control" name="Year" placeholder="Rapor Yılı Giriniz..">
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label">Adı</label>
+                        <input type="text" class="form-control" name="RaporAdi" placeholder="Rapor Adı Giriniz..">
+                    </div>
+                    <div>
+                        <div class="form-label">Rapor Yükle</div>
+                        <input type="file" class="form-control" name="pdf" />
+                    </div>
+                    <input type="submit">
+
+                </form>
+
             </div>
             <div class="modal-footer">
                 <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
                     Kapat
-                </a>
-                <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                    Ekle
                 </a>
             </div>
         </div>
@@ -151,34 +119,27 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                    <label class="form-label">Yıl</label>
-                    <input type="number" class="form-control" name="example-text-input" placeholder="Rapor Yılı Giriniz..">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Adı</label>
-                    <input type="text" class="form-control" name="example-text-input" placeholder="Rapor Adı Giriniz..">
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div>
-                            <div class="form-label">Rapor Yükle</div>
-                            <input type="file" class="form-control" />
-                        </div>
+                <form method="post" asp-area="Admin" asp-controller="Kurumsal" asp-action="BagimsizDerecelendirmeRaporu" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">Yıl</label>
+                        <input type="number" class="form-control" name="example-text-input" placeholder="Rapor Yılı Giriniz..">
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label">Adı</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Rapor Adı Giriniz..">
+                    </div>
+                    <div>
+                        <div class="form-label">Rapor Yükle</div>
+                        <input type="file" class="form-control" name="pdf"/>
+                    </div>
+                    <input type="submit">
+                </form>
             </div>
             <div class="modal-footer">
                 <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
                     Kapat
                 </a>
-                <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                    Ekle
-                </a>
+           
             </div>
         </div>
     </div>

@@ -1,7 +1,11 @@
-﻿<form>
-    <textarea style="" name="text">
+﻿@using EkoFaktoring.Core.Models.Kurumsal;
+@model InsanKaynaklariPolitikasi;
 
+<form method="post" asp-area="Admin" asp-controller="Kurumsal" asp-action="InsanKaynaklari">
+    <textarea style="" name="Icerik">
+        @Model.Icerik
     </textarea>
+    <input type="submit" />
 </form>
 
 @section _tinyMce{

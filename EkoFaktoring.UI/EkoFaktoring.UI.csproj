@@ -35,4 +35,9 @@
     <ProjectReference Include="..\EkoFaktoring.Service\EkoFaktoring.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\BagimsizDenetimRaporlari\" />
+    <Folder Include="wwwroot\DerecelendirmeRaporlari\" />
+  </ItemGroup>
+
 </Project>

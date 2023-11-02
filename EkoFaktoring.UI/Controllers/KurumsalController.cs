@@ -7,6 +7,7 @@ namespace EkoFaktoring.UI.Controllers
     public class KurumsalController : CustomBaseController
     {
         private readonly IService<FirmaProfil> _profilService;
+        private readonly IService<InsanKaynaklariPolitikasi> _politikaService;
 
         public KurumsalController(IService<FirmaProfil> profilService)
         {
@@ -31,7 +32,7 @@ namespace EkoFaktoring.UI.Controllers
         }
         public IActionResult InsanKaynaklari()
         {
-            return View();
+            return View(_politikaService.GetAllAsync().Result.ToList()[0]);
         }
     }
 }
