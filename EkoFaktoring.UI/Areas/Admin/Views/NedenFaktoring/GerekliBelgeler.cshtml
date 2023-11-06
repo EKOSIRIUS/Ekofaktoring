@@ -1,4 +1,5 @@
-﻿
+﻿@using EkoFaktoring.Core.Models.NedenFaktoring;
+@model List<GerekliBelgeler>
 
 <section id="contact" class="main-contact-form-area pdb100">
     <div class="container">
@@ -14,37 +15,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Faktoring Sözleşmesi</td>
-                            <td>Bu sebepten dolayı bu belgeyi talep ediyoruz..</td>
-                            <td><a href="#">Görüntüle</a></td>
-                            <td><a href="#">Düzenle</a></td>
-                        </tr>
-                        <tr>
-                            <td>Faktoring Sözleşmesi</td>
-                            <td>Bu sebepten dolayı bu belgeyi talep ediyoruz..</td>
-                            <td><a href="#">Görüntüle</a></td>
-                            <td><a href="#">Düzenle</a></td>
-                        </tr>
-                        <tr>
-                            <td>Faktoring Sözleşmesi</td>
-                            <td>Bu sebepten dolayı bu belgeyi talep ediyoruz..</td>
-                            <td><a href="#">Görüntüle</a></td>
-                            <td><a href="#">Düzenle</a></td>
-                        </tr>
-                        <tr>
-                            <td>Faktoring Sözleşmesi</td>
-                            <td>Bu sebepten dolayı bu belgeyi talep ediyoruz..</td>
-                            <td><a href="#">Görüntüle</a></td>
-                            <td><a href="#">Düzenle</a></td>
-                        </tr>
-                        <tr>
-                            <td>Faktoring Sözleşmesi</td>
-                            <td>Bu sebepten dolayı bu belgeyi talep ediyoruz..</td>
-                            <td><a href="#">Görüntüle</a></td>
-                            <td><a href="#">Düzenle</a></td>
+                        @{
+                            foreach (var belge in Model)
+                            {
+                                <tr>
+                                    <td>@belge.Adi</td>
+                                    <td>@belge.Aciklama</td>
+                                    <td><a href="@belge.DosyaYolu">Görüntüle</a></td>
+                                    <td><a asp-area="Admin" asp-controller="NedenFaktoring" asp-action="UpdateGerekliBelge" asp-route-id="@belge.Id">Düzenle</a></td>
+                                </tr>
+                            }
+                        }
 
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>

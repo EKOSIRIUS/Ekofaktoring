@@ -92,7 +92,7 @@ namespace EkoFaktoring.UI.Areas.Admin.Controllers
             return RedirectToAction("DenetimRaporlari");
         }
         [HttpPost]
-        public async Task<IActionResult> BagimsizDerecelendirmeRaporuAsync(BagimsizDerecelendirmeRaporu derecelendirmeRaporu, IFormFile pdf)
+        public async Task<IActionResult> BagimsizDerecelendirmeRaporu(BagimsizDerecelendirmeRaporu derecelendirmeRaporu, IFormFile pdf)
         {
             var dosya_yolu = Path.Combine(_hostEnvironment.WebRootPath, "DerecelendirmeRaporlari");
             if (!Directory.Exists(dosya_yolu))
@@ -121,12 +121,6 @@ namespace EkoFaktoring.UI.Areas.Admin.Controllers
             res.Icerik = politika.Icerik;
             await _politikaService.UpdateAsync(res);
             return RedirectToAction("InsanKaynaklari");
-        }
-
-        public bool FileSave(IFormFile file)
-        {
-            if (file==null) return false;
-            return false;
         }
     }
 }

@@ -1,7 +1,11 @@
-﻿<form>
-    <textarea style="" name="text">
+﻿@using EkoFaktoring.Core.Models.NedenFaktoring;
+@model FaktoringNedir
 
+<form method="post" asp-area="Admin" asp-controller="NedenFaktoring" asp-action="FaktoringNedir">
+    <textarea style="" name="Icerik">
+        @Model.Icerik
     </textarea>
+    <input type="submit">
 </form>
 
 @section _tinyMce{

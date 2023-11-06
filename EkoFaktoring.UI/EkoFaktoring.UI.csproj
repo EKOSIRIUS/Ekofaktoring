@@ -38,6 +38,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\BagimsizDenetimRaporlari\" />
     <Folder Include="wwwroot\DerecelendirmeRaporlari\" />
+    <Folder Include="wwwroot\GerekliBelgeler\" />
   </ItemGroup>
 
 </Project>

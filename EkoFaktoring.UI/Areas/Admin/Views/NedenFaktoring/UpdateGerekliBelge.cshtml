@@ -1,0 +1,19 @@
+﻿@using EkoFaktoring.Core.Models.NedenFaktoring;
+@model GerekliBelgeler
+
+<form method="post" asp-area="Admin" asp-controller="FaktoringNedir" asp-action="UpdateGerekliBelge" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label class="form-label">Adı</label>
+        <input type="text" class="form-control" name="Adi" placeholder="Adı Giriniz.." value="@Model.Adi">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Açıklama</label>
+        <input type="text" class="form-control" name="Aciklama" placeholder="Açıklama Giriniz.." value="@Model.Aciklama">
+    </div>
+    <div>
+        <div class="form-label">Rapor Yükle <a href="@Model.DosyaYolu">(Eski raporu görüntüle)</a></div>
+        <input type="file" class="form-control" name="pdf" />
+    </div>
+    <input type="hidden" name="Id" value="@Model.Id">
+    <input type="submit">
+</form>
