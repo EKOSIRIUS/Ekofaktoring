@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EkoFaktoring.Core.Entities.Duyurular;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -13,5 +14,8 @@ namespace EkoFaktoring.Core.Models.Duyurular
         public DateTime DuyuruTarihi { get; set; }
         public string Baslik { get; set; }
         public string Icerik { get; set; }
+
+        public int KategoriId { get; set; }
+        public Kategori Kategori { get; set; }
     }
 }

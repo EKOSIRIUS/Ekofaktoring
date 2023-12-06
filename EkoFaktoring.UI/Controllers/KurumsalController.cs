@@ -6,17 +6,10 @@ namespace EkoFaktoring.UI.Controllers
 {
     public class KurumsalController : CustomBaseController
     {
-        private readonly IService<FirmaProfil> _profilService;
-        private readonly IService<InsanKaynaklariPolitikasi> _politikaService;
-
-        public KurumsalController(IService<FirmaProfil> profilService)
+        public async Task<IActionResult> SirketProfili([FromServices]IPageService<FirmaProfil> _firmaProfilService)
         {
-            _profilService = profilService;
-        }
-
-        public IActionResult SirketProfili()
-        {
-            return View(_profilService.GetAllAsync().Result.ToList()[0]);
+            var result = await _firmaProfilService.GetPageAsync();
+            return View(result);
         }
         public IActionResult OrganizasyonSemasi()
         {
@@ -30,9 +23,10 @@ namespace EkoFaktoring.UI.Controllers
         {
             return View();
         }
-        public IActionResult InsanKaynaklari()
+        public async Task<IActionResult> InsanKaynaklari([FromServices] IPageService<InsanKaynaklariPolitikasi> _politikaService)
         {
-            return View(_politikaService.GetAllAsync().Result.ToList()[0]);
+            var result = await _politikaService.GetPageAsync();
+            return View(result);
         }
     }
 }

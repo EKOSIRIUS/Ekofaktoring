@@ -8,63 +8,59 @@ namespace EkoFaktoring.UI.Areas.Admin.Controllers
 {
     public class KurumsalController : CustomBaseController
     {
-        private readonly IService<FirmaProfil> _profilService;
-        private readonly IService<YillikBonoTahvil> _yillikBonoService;
-        private readonly IService<TahvilBono> _bonoService;
-        private readonly IService<InsanKaynaklariPolitikasi> _politikaService;
         private readonly IService<BagimsizDenetimRaporu> _denetimService;
         private readonly IService<BagimsizDerecelendirmeRaporu> _derecelendirmeService;
         private readonly IWebHostEnvironment _hostEnvironment;
-        public KurumsalController(IService<FirmaProfil> profilService, IService<InsanKaynaklariPolitikasi> politikaService, IService<YillikBonoTahvil> yillikBonoService, IService<TahvilBono> bonoService, IWebHostEnvironment hostEnvironment, IService<BagimsizDenetimRaporu> denetimService, IService<BagimsizDerecelendirmeRaporu> derecelendirmeService)
+        private readonly IPageService<FirmaProfil> _firmaProfilService;
+        private readonly ITableService<TahvilBono> _tahvilService;
+        private readonly ITableService<YillikBonoTahvil> _yillikTahvilService;
+        private readonly IPageService<InsanKaynaklariPolitikasi> _politikaService;
+
+        public KurumsalController(IPageService<FirmaProfil> firmaProfilService, ITableService<TahvilBono> tahvilService, ITableService<YillikBonoTahvil> yillikTahvilService)
         {
-            _profilService = profilService;
-            _politikaService = politikaService;
-            _yillikBonoService = yillikBonoService;
-            _bonoService = bonoService;
-            _hostEnvironment = hostEnvironment;
-            _denetimService = denetimService;
-            _derecelendirmeService = derecelendirmeService;
+            _firmaProfilService = firmaProfilService;
+            _tahvilService = tahvilService;
+            _yillikTahvilService = yillikTahvilService;
         }
 
-        public IActionResult FirmaProfil()
+        public async Task<IActionResult> FirmaProfilAsync()
         {
-            return View(_profilService.GetAllAsync().Result.ToList()[0]);
+            var result = await _firmaProfilService.GetPageAsync();
+            return View(result);
         }
         [HttpPost]
         public async Task<IActionResult> FirmaProfil(FirmaProfil input)
         {
-            var res = _profilService.GetAllAsync().Result.ToList()[0];
-            res.Icerik = input.Icerik;
-            await _profilService.UpdateAsync(res);
+            await _firmaProfilService.UpdateAsync(input);
             return RedirectToAction("FirmaProfil");
         }
-        public IActionResult TahvilBono()
+        public async Task<IActionResult> TahvilBono()
         {
-            ViewBag.TahvilBono = _bonoService.GetAllAsync().Result.ToList();
-            ViewBag.YillikTahvilBono = _yillikBonoService.GetAllAsync().Result.ToList();
+            ViewBag.TahvilBono = await _tahvilService.GetDataAsync();
+            ViewBag.YillikTahvilBono = await _yillikTahvilService.GetDataAsync();
 
             return View();
         }
         public IActionResult TahvilBonoSil(int id)
         {
-            _bonoService.RemoveAsync(_bonoService.GetByIdAsync(id).Result);
+            //silme
             return RedirectToAction("TahvilBono");
         }
         public IActionResult YillikTahvilBonoSil(int id)
         {
-            _yillikBonoService.RemoveAsync(_yillikBonoService.GetByIdAsync(id).Result);
+            //silme
             return RedirectToAction("TahvilBono");
         }
         [HttpPost]
         public async Task<IActionResult> TahvilBono(TahvilBono tahvil)
         {
-            await _bonoService.AddAsync(tahvil);
+            await _tahvilService.SaveDataAsync(tahvil);
             return RedirectToAction("TahvilBono");
         }
         [HttpPost]
         public async Task<IActionResult> YillikTahvilBono(YillikBonoTahvil tahvil)
         {
-            await _yillikBonoService.AddAsync(tahvil);
+            await _yillikTahvilService.SaveDataAsync(tahvil);
             return RedirectToAction("TahvilBono");
         }
         public IActionResult DenetimRaporlari()
@@ -109,17 +105,17 @@ namespace EkoFaktoring.UI.Areas.Admin.Controllers
             _derecelendirmeService.AddAsync(derecelendirmeRaporu);
             return RedirectToAction("DenetimRaporlari");
         }
-        public IActionResult InsanKaynaklari()
+
+        public async Task<IActionResult> InsanKaynaklari()
         {
-            return View(_politikaService.GetAllAsync().Result.ToList()[0]);
+            var result = await _politikaService.GetPageAsync();
+            return View(result);
         }
 
         [HttpPost]
         public async Task<IActionResult> InsanKaynaklari(InsanKaynaklariPolitikasi politika)
         {
-            var res = _politikaService.GetAllAsync().Result.ToList()[0];
-            res.Icerik = politika.Icerik;
-            await _politikaService.UpdateAsync(res);
+            _politikaService.UpdateAsync(politika);
             return RedirectToAction("InsanKaynaklari");
         }
     }

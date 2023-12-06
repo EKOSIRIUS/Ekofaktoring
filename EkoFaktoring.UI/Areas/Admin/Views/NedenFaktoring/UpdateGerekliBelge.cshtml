@@ -1,7 +1,7 @@
 ﻿@using EkoFaktoring.Core.Models.NedenFaktoring;
 @model GerekliBelgeler
 
-<form method="post" asp-area="Admin" asp-controller="FaktoringNedir" asp-action="UpdateGerekliBelge" enctype="multipart/form-data">
+<form method="post" asp-controller="FaktoringNedir" asp-action="UpdateGerekliBelge" enctype="multipart/form-data">
     <div class="mb-3">
         <label class="form-label">Adı</label>
         <input type="text" class="form-control" name="Adi" placeholder="Adı Giriniz.." value="@Model.Adi">

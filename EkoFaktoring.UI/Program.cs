@@ -18,8 +18,17 @@ namespace EkoFaktoring.UI
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            builder.Services.AddScoped(typeof(ITableRepository<>), typeof(TableRepository<>));
+            builder.Services.AddScoped(typeof(IPageRepository<>), typeof(PageRepository<>));
+
             builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
+
+            builder.Services.AddScoped(typeof(ITableService<>), typeof(TableService<>));
+            builder.Services.AddScoped(typeof(IPageService<>), typeof(PageService<>));
+
 
             builder.Services.AddDbContext<AppDbContext>(
                 x =>

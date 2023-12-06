@@ -1,4 +1,5 @@
-﻿using EkoFaktoring.Core.Models.Duyurular;
+﻿using EkoFaktoring.Core.Entities.Duyurular;
+using EkoFaktoring.Core.Models.Duyurular;
 using EkoFaktoring.Core.Models.Iletisim;
 using EkoFaktoring.Core.Models.Kurumsal;
 using EkoFaktoring.Core.Models.Kurumsal.DenetimRaporu;
@@ -19,8 +20,8 @@ namespace EkoFaktoring.Repository
         {
             
         }
-
         public DbSet<Duyuru> Duyurular { get; set; }
+        public DbSet<Kategori> Kategoriler { get; set; }
         public DbSet<Iletisim> Iletisim { get; set; }
         public DbSet<BagimsizDenetimRaporu> DenetimRaporu { get; set; }
         public DbSet<BagimsizDerecelendirmeRaporu> DerecelendirmeRaporu { get; set; }

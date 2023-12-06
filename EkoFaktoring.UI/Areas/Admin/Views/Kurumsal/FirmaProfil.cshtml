@@ -3,6 +3,7 @@
 
 <form method="post" asp-area="Admin" asp-controller="Kurumsal" asp-action="FirmaProfil">
     <textarea style="" name="Icerik">@Model.Icerik</textarea>
+    <input type="hidden" value="@Model.Id" name="Id"/>
     <input type="submit" />
 </form>
 
