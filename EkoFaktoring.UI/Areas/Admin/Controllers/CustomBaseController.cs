@@ -2,8 +2,8 @@
 
 namespace EkoFaktoring.UI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    [Route("[area]/[action]")]
+    //[Area("Admin")]
+    //[Route("[area]/[action]")]
     public class CustomBaseController : Controller
     {
 
